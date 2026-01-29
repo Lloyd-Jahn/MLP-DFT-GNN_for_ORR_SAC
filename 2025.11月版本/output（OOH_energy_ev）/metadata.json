@@ -1,0 +1,27 @@
+{
+  "n_total_graphs": 263,
+  "n_train": 189,
+  "n_val": 21,
+  "n_test": 53,
+  "元素词表": [
+    "C",
+    "N",
+    "O",
+    "P",
+    "B",
+    "S",
+    "Ag",
+    "Cd",
+    "Co"
+  ],
+  "in_channels": 15,
+  "edge_dim": 4,
+  "best_val_mse": 75258.23796662831,
+  "test_mse": 79011.46171310713,
+  "test_rmse": 281.0897751842054,
+  "test_mae": 191.63163325471697,
+  "test_r2": 0.9997314537264054,
+  "缺失_xyz_count": 0,
+  "model_parameters": 2376193,
+  "training_epochs": 85
+}

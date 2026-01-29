@@ -1,0 +1,25 @@
+
+============================================================
+🔍 DEBUGGING REPORT (Total Files: 1465)
+============================================================
+1. SYSTEM ERRORS (Where data disappears):
+   - Missing Files (Orphans) : 0
+   - Corrupted Files (Read Error) : 0
+   - Energy Missing          : 0
+   - Model Crashed        : 179
+
+2. PHYSICS FAILURES (Valid file, bad property):
+   - OOH Detached (> 3A) : 104
+   - O2 Detached (> 3A)  : 177
+   - O2 Too Weak (< -3.0eV) : 20
+   - O2 Too Strong (> 0.5eV) : 252
+   - OOH Too Strong (< -3.0eV) : 110
+   - OOH Too Weak (> 0.5eV)   : 0
+
+3. SUCCESS:
+   - VALID CANDIDATES        : 623
+============================================================
+TOTAL ACCOUNTED FOR: 1465 / 1465
+============================================================
+Errors detailed in: Error_Log.txt
+Candidates saved to: Final_Candidates_List.csv
