@@ -21,18 +21,18 @@ OUTPUT_REPORT = "Screening_Report.txt"
 ERROR_LOG = "Error_Log.txt"
 
 # 2. 能量基准 (eV) 
-E_REF_OOH = -12.9619  
-E_REF_O2  = -9.6869   
+E_REF_OOH = -13.1615
+E_REF_O2  = -9.6893  
 
-# 3. 筛选阈值 (修正版)
-# 3.1 几何阈值 (放宽以减少误杀)
+# 3. 筛选阈值
+# 3.1 几何阈值
 MAX_BOND_LENGTH = 3
 
 # 3.2 能量阈值 (eV)
-OOH_MIN = -3.0          # 收紧：-8.0 -> -3.0
-OOH_MAX = 0.5           
-O2_STABILITY_MAX = 0.5
+OOH_MIN = -3.0
+OOH_MAX = 0.5
 O2_STABILITY_MIN = -3.0
+O2_STABILITY_MAX = 0.5
 
 # ================= 🛠️ 工具函数库 =================
 
@@ -207,7 +207,7 @@ def main():
     
     report = f"""
 ============================================================
-🔍 DEBUGGING REPORT (Total Files: {total_files})
+🔍 SCREENING REPORT (Total Files: {total_files})
 ============================================================
 1. SYSTEM ERRORS (Where data disappears):
    - Missing Files (Orphans) : {audit_log['missing_partner']}

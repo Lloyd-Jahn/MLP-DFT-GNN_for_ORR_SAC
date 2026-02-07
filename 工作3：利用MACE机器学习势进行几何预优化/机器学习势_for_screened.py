@@ -19,7 +19,7 @@ input_folder = "xyzs"              # 原始结构文件夹
 output_folder = "xyzs_optimized"   # 优化后输出文件夹
 list_file = "to_calc_list.csv"     # 计算列表
 warning_log = "optimization_warnings.log" # 未收敛结构记录文件
-MAX_STEPS = 500                    # 【HPC设置】最大几何优化步数
+MAX_STEPS = 500                    # 最大几何优化步数
 # ----------------------------------------
 
 def get_correct_5x5_cell():

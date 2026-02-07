@@ -12,7 +12,7 @@ from mace.calculators import mace_mp
 input_folder = "xyz_optimzed"     # 输入: 已优化好的基底
 output_dir = "Adsorbed_Structures"  # 输出: 吸附态结构
 warning_log = "adsorption_warnings.log" # 未收敛记录
-MAX_STEPS = 200                     # 【HPC设置】吸附预优化最大步数
+MAX_STEPS = 200                     # 吸附预优化最大步数
 LOG_INTERVAL = 10                   # 每隔多少步打印一次进度
 # ----------------------------------------
 
