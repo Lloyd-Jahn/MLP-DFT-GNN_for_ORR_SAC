@@ -14,7 +14,7 @@ def main():
     # 2. 提取“族名” (Base Structure)
     # 逻辑：去除末尾的 -hex, -pen, -opp 后缀，得到纯粹的化学配位式
     # 例如: 'Fe_N2O2-hex' -> 'Fe_N2O2'
-    #       'Ag_N4'       -> 'Ag_N4' (不变)
+    #       'Ag_N4'      -> 'Ag_N4' (不变)
     def get_base_name(s):
         return re.sub(r'-(hex|pen|opp)$', '', s)
 
@@ -38,7 +38,7 @@ def main():
         group_strat = unique_groups[~unique_groups['Metal'].isin(single_sample_metals)]
         group_single = unique_groups[unique_groups['Metal'].isin(single_sample_metals)]
         
-        # 核心抽样步骤：针对 Group 进行
+        # 核心抽样步骤：针对“家族”进行
         _, sampled_groups_main = train_test_split(
             group_strat, 
             test_size=SAMPLE_RATIO, 
@@ -55,7 +55,7 @@ def main():
 
     print(f"已选中 {len(sampled_groups_final)} 个家族。")
 
-    # 5. 【关键步骤】家族召回 (Recall)
+    # 5. 家族召回 (Recall)
     # 根据选中的 Base_Name，把原始表中属于这些家族的所有异构体全捞回来
     # isin() 会自动匹配所有属于选中家族的行
     final_calc_list = df[df['Base_Name'].isin(sampled_groups_final['Base_Name'])].copy()
