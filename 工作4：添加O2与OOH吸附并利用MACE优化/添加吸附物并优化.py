@@ -27,7 +27,7 @@ def get_correct_5x5_cell():
     return np.array([vec_a, vec_b, vec_c])
 
 def find_metal_index(atoms):
-    non_metals = ['C', 'H', 'O', 'N', 'B', 'P', 'S', 'F', 'Cl', 'Si']
+    non_metals = ['C', 'O', 'N', 'B', 'P', 'S']
     for atom in atoms:
         if atom.symbol not in non_metals:
             return atom.index
@@ -58,7 +58,7 @@ def main():
         calc = mace_mp(
             model="medium", 
             device=device,            # 自动应用检测到的设备
-            default_dtype="float64"   # 保持高精度
+            default_dtype="float64"
         )
         print(f">>> MACE-MP-0 (Medium) 已加载到 {device.upper()}！")
     except Exception as e:
@@ -108,7 +108,6 @@ def main():
                 out_name = f"{base_name}_with_{name}.xyz"
                 fname = os.path.join(output_dir, out_name)
                 
-                # ---- 【关键】断点续传检测 ----
                 if os.path.exists(fname):
                     print(f"  > ⏭️  跳过已存在文件: {out_name}")
                     continue
@@ -127,7 +126,7 @@ def main():
                 atoms.calc = calc
                 
                 # ---- 优化与实时监控 ----
-                opt = BFGS(atoms, logfile=None) # 关闭默认 logfile，使用自定义打印
+                opt = BFGS(atoms, logfile=None)
                 
                 # 定义实时回调函数
                 def print_status():
