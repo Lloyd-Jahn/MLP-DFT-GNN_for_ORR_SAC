@@ -9,7 +9,7 @@ from ase.optimize import BFGS
 from mace.calculators import mace_mp
 
 # ---------------- 配置区域 ----------------
-input_folder = "xyz_optimzed"     # 输入: 已优化好的基底
+input_folder = "xyzs_optimized"     # 输入: 已优化好的基底
 output_dir = "Adsorbed_Structures"  # 输出: 吸附态结构
 warning_log = "adsorption_warnings.log" # 未收敛记录
 MAX_STEPS = 200                     # 吸附预优化最大步数
