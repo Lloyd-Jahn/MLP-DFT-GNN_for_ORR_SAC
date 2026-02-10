@@ -30,7 +30,6 @@ def get_optimized_energy(atoms, name="molecule"):
 
 # 1. 计算 O2
 o2 = molecule("O2")
-# 可以在优化前给个初始扰动或设置初始磁矩，但在 MACE 中通常由几何决定
 e_o2 = get_optimized_energy(o2, "O2")
 
 # 2. 计算 OOH

@@ -80,8 +80,8 @@ def main():
 
     # 7. 保存
     # 只保留 structure 列，符合后续代码读取习惯
-    final_calc_list[['structure']].to_csv('to_calc_list.csv', index=False)
-    print(f"已保存至 to_calc_list.csv")
+    final_calc_list[['structure']].to_csv('分层抽样筛选.csv', index=False)
+    print(f"已保存csv文件！")
 
 if __name__ == "__main__":
     main()

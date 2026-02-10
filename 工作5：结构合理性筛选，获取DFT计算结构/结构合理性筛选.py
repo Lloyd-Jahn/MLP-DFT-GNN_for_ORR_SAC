@@ -22,7 +22,7 @@ ERROR_LOG = "Error_Log.txt"
 
 # 2. 能量基准 (eV) 
 E_REF_OOH = -13.1615
-E_REF_O2  = -9.6893  
+E_REF_O2  = -9.6893
 
 # 3. 筛选阈值
 # 3.1 几何阈值
@@ -37,8 +37,7 @@ O2_STABILITY_MAX = 0.5
 # ================= 🛠️ 工具函数库 =================
 
 def get_metal_info(atoms):
-    non_metals = set(['H', 'He', 'B', 'C', 'N', 'O', 'F', 'Ne', 
-                      'Si', 'P', 'S', 'Cl', 'Ar', 'Se', 'Br', 'Kr'])
+    non_metals = set(['B', 'C', 'N', 'O', 'P', 'S'])
     for atom in atoms:
         if atom.symbol not in non_metals:
             return atom.symbol, atom.index
@@ -70,7 +69,7 @@ def analyze_geometry(atoms_slab, atoms_ads, filename):
         dists = np.linalg.norm(ads_pos - metal_pos, axis=1)
         min_dist = np.min(dists)
         
-        # 严格检查：如果距离太近（比如 < 1.0），说明模型炸了，原子重叠
+        # 如果距离太近，说明模型炸了，原子重叠
         if min_dist < 0.8:
             return False, min_dist, "Atom Overlap"
 
