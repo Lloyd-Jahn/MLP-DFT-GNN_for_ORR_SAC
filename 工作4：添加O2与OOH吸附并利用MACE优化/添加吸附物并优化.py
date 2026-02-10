@@ -141,7 +141,7 @@ def main():
                 opt.attach(print_status, interval=1) # 这里的 interval=1 表示每步都调，我们在函数内控制打印频率
                 
                 # 运行优化
-                opt.run(fmax=0.05, steps=MAX_STEPS)
+                opt.run(fmax=0.02, steps=MAX_STEPS)
                 
                 # ---- 收敛性检查 ----
                 forces = atoms.get_forces()

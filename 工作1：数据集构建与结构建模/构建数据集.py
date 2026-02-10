@@ -11,7 +11,7 @@ import sys
     # 4d
     'Y', 'Zr', 'Nb', 'Mo', 'Tc', 'Ru', 'Rh', 'Pd', 'Ag', 'Cd',
     # 5d
-    'Hf', 'Ta', 'W', 'Re', 'Os', 'Ir', 'Pt', 'Au', 'Hg', 'Tl',
+    'La', 'Hf', 'Ta', 'W', 'Re', 'Os', 'Ir', 'Pt', 'Au', 'Hg'
 ]
 
 双空位变体 = ['-pen', '-hex', '-opp']
@@ -30,7 +30,7 @@ def 分配配位数(金属列表, 配位数列表):
 分配配位数(['Y', 'Zr', 'Nb', 'Mo', 'Tc', 'Ru', 'Rh', 'Pd', 'Ag', 'Cd'], [3, 4])
 
 # 5d
-分配配位数(['Hf', 'Ta', 'W', 'Re', 'Os', 'Ir', 'Pt', 'Au', 'Hg', 'Tl'], [3, 4])
+分配配位数(['La', 'Hf', 'Ta', 'W', 'Re', 'Os', 'Ir', 'Pt', 'Au', 'Hg'], [3, 4])
 
 
 def 格式化表达式(金属, 计数器):
