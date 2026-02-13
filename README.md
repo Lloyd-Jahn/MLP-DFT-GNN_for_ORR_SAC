@@ -1,6 +1,7 @@
 # AI 设计单原子催化剂
 
 基于机器学习的高性能单原子催化剂自动化设计与筛选系统
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 ## 项目简介
 
@@ -258,12 +259,6 @@ ls xyzs_optimized/*.xyz | wc -l
 ## 许可证
 
 本项目采用 MIT 许可证。详见 [LICENSE](LICENSE) 文件。
-
-## 联系方式
-
-- 项目维护者：[您的姓名]
-- 邮箱：[your.email@example.com]
-- GitHub Issues：[项目 Issues 页面]
 
 ## 致谢
 
