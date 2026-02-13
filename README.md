@@ -1,8 +1,8 @@
 # AI 设计单原子催化剂
 
-基于机器学习的高性能单原子催化剂自动化设计与筛选系统
-
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
+基于机器学习的高性能单原子催化剂自动化设计与筛选系统
 
 ## 项目简介
 
