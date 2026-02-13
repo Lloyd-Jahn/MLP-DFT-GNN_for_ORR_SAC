@@ -1,6 +1,6 @@
 # AI 设计单原子催化剂
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 基于机器学习的高性能单原子催化剂自动化设计与筛选系统
 
@@ -242,19 +242,6 @@ tail -f optimization_warnings.log
 
 # 统计已完成的文件数
 ls xyzs_optimized/*.xyz | wc -l
-```
-
-## 引用
-
-如果您在研究中使用了本项目，请引用：
-
-```bibtex
-@software{sac_design_2025,
-  title = {AI-Assisted Single-Atom Catalyst Design Framework},
-  author = {Your Name},
-  year = {2025},
-  url = {https://github.com/yourusername/sac-design}
-}
 ```
 
 ## 许可证
